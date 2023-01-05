@@ -1,0 +1,63 @@
+"apple": "its a fruit"
+1: "this is an integer"
+
+"---": "3 dashes end a document"
+---
+# single line comment
+# YAML does not support multiline comments
+#list
+- apple
+- mango
+- banana
+---
+
+nations:
+  - Panjab
+  - Canada
+  - USA
+---
+
+nations: [Panjab, Canada, USA]
+---
+
+{name: "Tajinder Singh", age: 27}
+---
+
+# String variables (stored in diff ways)
+name: Tajinder Singh
+name1: "Tajinder Singh"
+name2: 'Tajinder Singh'
+---
+# write a single line in multiple lines
+message: >
+  it can be
+  written in
+  a single line
+---
+
+number: 54765
+marks: 98.36
+booleanValue1: true # y, Y, true, True, TRUE
+booleanValue2: no # n, N, false, False, FALSE
+
+# Specify the type expicitly
+num1: !!int 5
+positiveNum: !!int 5
+negativeNum: !!int -5
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+commaValue: !!int +45_56 # 45,56
+
+# ?floating numbers
+grade: !!float 45.56
+infiniteNum: !!float .inf
+booleanValue3: !!bool no
+not a num : .nan
+
+age1: !!float 23
+married: !!str true
+binary: !!int 0b101010
+hexadecimal: !!int 0x1C7A
+name: !!str "James"
+
+...
